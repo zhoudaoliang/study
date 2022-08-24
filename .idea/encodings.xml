@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../mvn-repository/org/springframework/boot/spring-boot-starter-parent/2.7.2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_boot/springboot_demo01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_boot/springboot_demo02/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_boot/springboot_mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring_boot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/springcloud_01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/springcloud_parent/eureka-parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/springcloud_parent/eureka-parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/springcloud_parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/springcloud_parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/springcloud_resttemplate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,14 @@
+#mybatis:
+#  type-aliases-package: com.zhou.domain # 指定mybatis别名包
+#  mapper-locations: classpath:com/zhou/dao/*.xml # 指定xml映射文件路径
+#logging:
+#  level:
+#    com.zhou.dao: debug # 配置日志
+#spring:
+#  datasource:
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://39.108.233.234:9495/springboot?useUnicode=true&characterEncoding=utf8
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#server:
+#  port: 18081

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--
+        properties 表示复数(多组键值对)
+            resource属性表示读取(引用) 指定properties属性配置文件的键值对
+    -->
+    <properties resource="jdbc.properties"/>
+
+    <!--
+        environments 表示配置数据库环境
+    -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--数据库驱动-->
+                <property name="driver" value="${driverClassName}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${user}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- mybatis 是把sql配置到xml配置文件中
+           下面的配置是告诉Mybatis到哪里加载sql的配置文件
+         -->
+    <mappers>
+        <mapper resource="com/zhou/mapper/UserMapper.xml"/>
+    </mappers>
+</configuration>

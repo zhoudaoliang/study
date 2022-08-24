@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+    namespace是名称空间,它的取值必须是对应的接口的全类名
+-->
+<mapper namespace="com.zhou.mapper.UserMapper">
+    <!--
+        select 标签用来配置select查询语句
+            id 属性配置一个唯一的标识
+            resultType 是查询后每一行记录封装的对象类型
+            parameterType 表示参数类型  ( 可选的 ) ,一般情况下,如果是一个参数.而且是JavaBean建议写上
+                    int 表示==>>> java.lang.Integer
+         #{id} 它是占位符 ?
+    -->
+    <select id="selectUserById" resultType="com.zhou.pojo.User">
+        select `id`, `last_name` lastName, `sex`
+        from t_user
+        where id = #{id}
+    </select>
+
+    <!--    /**
+    * 查询全部
+    *
+    * @return
+    */
+    public List<User> selectAll();
+
+        resultType 是表示查询回来之后每一行记录转换为什么类型的对象
+
+    -->
+
+    <select id="selectAll" resultType="com.zhou.pojo.User">
+        select `id`,`last_name` lastName,`sex` from t_user
+    </select>
+
+    <!--    /**
+    * 更新用户
+    *
+    * @param user
+    * @return
+    */
+    public int updateUser(User user);
+            parameterType 和 resultType 都是在JavaBean类型的时候才写.
+    -->
+
+    <update id="updateUser" parameterType="com.zhou.pojo.User">
+        update
+            t_user
+        set
+            `last_name` = #{lastName},
+            `sex` = #{sex}
+        where
+            id = #{id}
+    </update>
+
+    <!--    /**
+    * 删除用户
+    *
+    * @param id
+    * @return
+    */
+    public int deleteUserById(Integer id);-->
+    <delete id="deleteUserById">
+        delete from t_user where id = #{id}
+    </delete>
+
+    <!--    /**
+    * 插入用户
+    *
+    * @param user
+    * @return
+    */
+    public int insertUser(User user);-->
+<!--    <insert id="insertUser" parameterType="com.zhou.pojo.User">-->
+<!--        insert into-->
+<!--            t_user(`last_name`,`sex`)-->
+<!--        values-->
+<!--            (#{lastName},#{sex})-->
+<!--    </insert>-->
+
+    <!--    /**
+    * 插入用户
+    *
+    * @param user
+    * @return
+    */
+    public int insertUser(User user);
+            useGeneratedKeys="true"     表示使用( 返回 )数据库自增的主键值
+                use 使用
+                Generated 生成的
+                keys 主键
+            keyProperty="id" 表示将返回的主键值注入到id属性中
+
+    -->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id" parameterType="com.zhou.pojo.User">
+        insert into
+            t_user(`last_name`,`sex`)
+        values
+            (#{lastName},#{sex})
+    </insert>
+</mapper>
